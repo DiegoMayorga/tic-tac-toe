@@ -1,11 +1,11 @@
-const GameOver = ({ winner }) => {
+const GameOver = ({ winner, ...props }) => {
   return (
     <div id="game-over">
       <h2>Game over!</h2>
       {winner && <p>{winner} won!</p>}
       {!winner && <p>It's a draw</p>}
       <p>
-        <button>Rematch!</button>
+        <button {...props}>Rematch!</button>
       </p>
     </div>
   );
