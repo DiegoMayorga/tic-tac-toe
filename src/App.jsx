@@ -45,6 +45,7 @@ function deriveWinner(gameBoard, players) {
       winner = players[firstSquareSymbol];
     }
   }
+  return winner;
 }
 
 function deriveGameBoard(gameTurns) {
