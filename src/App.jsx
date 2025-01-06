@@ -26,7 +26,7 @@ function deriveActivePlayer(gameTurns) {
   return currentPlayer;
 }
 
-function deriveWinner(gameBoard, players) {
+function deriveWinner(gameBoard, PLAYERS) {
   let winner;
 
   for (const combination of WINNING_COMBINATIONS) {
@@ -42,7 +42,7 @@ function deriveWinner(gameBoard, players) {
       firstSquareSymbol === secondSquareSymbol &&
       firstSquareSymbol === thirdSquareSymbol
     ) {
-      winner = players[firstSquareSymbol];
+      winner = PLAYERS[firstSquareSymbol];
     }
   }
   return winner;
